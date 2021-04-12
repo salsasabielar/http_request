@@ -1,5 +1,15 @@
 # http_request
 
+HASIL SCREENSHOT
+<p>Tampilan Awal</p>
+
+![plot](./image/hasil.jpeg)
+
+<p>Challange</p>
+
+![plot](./image/hasil1.jpeg)
+
+
 A new Flutter project.
 
 ## Getting Started
