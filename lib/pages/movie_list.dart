@@ -11,6 +11,7 @@ class _MovieListState extends State<MovieList> {
   int moviesCount;
   List movies;
   HttpService service;
+  var image;
 
   Future initialize() async {
     movies = [];
@@ -41,6 +42,9 @@ class _MovieListState extends State<MovieList> {
             color: Colors.white,
             elevation: 2.0,
             child: ListTile(
+              leading: Image.network(
+                  'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/' +
+                      movies[position].posterPath),
               title: Text(movies[position].title),
               subtitle: Text(
                 'Rating = ' + movies[position].voteAverage.toString(),
