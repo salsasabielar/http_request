@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:http_request/pages/movie_detail.dart';
 import 'package:http_request/service/http_service.dart';
-
-import 'movie_detail.dart';
 
 class MovieList extends StatefulWidget {
   @override
@@ -25,6 +24,7 @@ class _MovieListState extends State<MovieList> {
   @override
   void initState() {
     service = HttpService();
+    initialize();
     super.initState();
   }
 
@@ -48,6 +48,7 @@ class _MovieListState extends State<MovieList> {
               onTap: () {
                 MaterialPageRoute route = MaterialPageRoute(
                     builder: (_) => MovieDetail(movies[position]));
+                Navigator.push(context, route);
               },
             ),
           );
