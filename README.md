@@ -7,7 +7,8 @@ HASIL SCREENSHOT
 
 <p>Challange</p>
 
-![plot](./image/hasil1.jpeg)
+![plot](./image/challange1.jpeg)
+![plot](./image/challange2.jpeg)
 
 
 A new Flutter project.
