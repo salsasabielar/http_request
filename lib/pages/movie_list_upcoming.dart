@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:http_request/pages/movie_detail.dart';
+import 'package:http_request/pages/movie_detail_upcoming.dart';
 import 'package:http_request/service/http_service.dart';
 
-class MovieList extends StatefulWidget {
+class MovieListUpcoming extends StatefulWidget {
   @override
   _MovieListState createState() => _MovieListState();
 }
 
-class _MovieListState extends State<MovieList> {
+class _MovieListState extends State<MovieListUpcoming> {
   int moviesCount;
   List movies;
   HttpService service;
@@ -15,7 +15,7 @@ class _MovieListState extends State<MovieList> {
 
   Future initialize() async {
     movies = [];
-    movies = await service.getPopularMovies();
+    movies = await service.getUpcomingMovies();
     setState(() {
       moviesCount = movies.length;
       movies = movies;
@@ -53,7 +53,7 @@ class _MovieListState extends State<MovieList> {
               ),
               onTap: () {
                 MaterialPageRoute route = MaterialPageRoute(
-                    builder: (_) => MovieDetail(movies[position]));
+                    builder: (_) => MovieDetailUpcoming(movies[position]));
                 Navigator.push(context, route);
               },
             ),

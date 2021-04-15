@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:http_request/model/movie.dart';
 
-class MovieDetail extends StatelessWidget {
+class MovieDetailTopRated extends StatelessWidget {
   final Movie movie;
   final String imgPath = 'https://image.tmdb.org/t/p/w500/';
 
-  MovieDetail(this.movie);
+  MovieDetailTopRated(this.movie);
 
   @override
   Widget build(BuildContext context) {
