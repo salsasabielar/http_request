@@ -23,6 +23,13 @@ class _MovieListState extends State<MovieListNowPlaying> {
   }
 
   @override
+  void setState(fn) {
+    if (mounted) {
+      super.setState(fn);
+    }
+  }
+
+  @override
   void initState() {
     service = HttpService();
     initialize();
